@@ -61,7 +61,7 @@ h1{
     margin: 20% auto;
     width: 80%;
     height: 80%;
-    animation: floaty 2s infinite;
+    animation: floaty s infinite;
 }
 
 #spooky #body {
