@@ -58,10 +58,10 @@ h1{
 }
 
 #spooky {
-    margin: 20% auto;
+    margin: 10% auto;
     width: 80%;
     height: 80%;
-    animation: floaty s infinite;
+    animation: floaty 2s infinite;
 }
 
 #spooky #body {
