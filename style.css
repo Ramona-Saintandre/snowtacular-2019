@@ -1,0 +1,308 @@
+@import url(https://fonts.googleapis.com/css?family=Creepster:regular);
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: linear-gradient(175deg, 
+    #3d1c0c, 
+    rgb(212, 118, 10),
+    rgb(231, 80, 9),
+    #FFF800);
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #424f6f; */
+}
+h1{
+    font-family: 'creepster',sans-serif;
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 125px;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+    display:block;
+    background-size: 100% 90%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;   
+    text-fill-color: transparent;
+    background-image: linear-gradient(25deg, 
+                      #e24d07, 
+                      rgb(238, 14, 14),
+                      rgb(218, 141, 42),
+                      rgb(70, 85, 5));
+  
+
+}
+.snowtacular{
+    top:20px;
+    left:30%;
+    text-align: center;
+}
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+#spooky {
+    margin: 10% auto;
+    width: 80%;
+    height: 80%;
+    animation: floaty 2s infinite;
+}
+
+#spooky #body {
+    position: relative;
+    margin: 50px auto 0;
+    width: 180px;
+    height: 220px;
+    background: #f2fbf1;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+}
+
+#spooky #body:before,
+#spooky #body:after {
+    content: '';
+    position: absolute;
+    top: 130px;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f2fbf1;
+    animation: floaty .2s infinite;
+}
+
+#spooky #body:before {
+    left: -18px;
+}
+
+#spooky #body:after {
+    right: -18px;
+}
+
+#spooky #body #eyes {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 90px 0 0;
+    width: 90px;
+    height: 20px;
+}
+
+#spooky #body #eyes:before,
+#spooky #body #eyes:after {
+    content: ' ';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #252c49;
+    border-radius: 50%;
+}
+
+#spooky #body #mouth {
+    background: #252c49;
+    margin: 25px auto 0;
+    width: 60px;
+    height: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#spooky #body #mouth:before {
+    content: ' ';
+    display: block;
+    background: #fff;
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+}
+
+#spooky #body #feet {
+    position: absolute;
+    display: flex;
+    bottom: -18px;
+    width: 180px;
+    height: 36px;
+}
+
+#spooky #body #feet > *,
+#spooky #body #feet::before,
+#spooky #body #feet::after {
+    content: ' ';
+    width: 36px;
+    height: 36px;
+    background: #f2fbf1;
+    border-radius: 50%;
+}
+
+#shadow {
+    margin: -90px auto 0;
+    background: #252c49;
+    width: 180px;
+    height: 40px;
+    border-radius: 50%;
+    animation: zoomy 2s infinite;
+}
+
+@keyframes floaty {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes zoomy {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+}
+/* customizable snowflake styling */
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+  }
+  .snowflake2 {
+    color: rgb(216, 68, 9);
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 3px #000;
+  }
+  .snowflake3 {
+    color: rgb(236, 233, 11);
+    font-size: 5em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 8px #000;
+  }
+
+  /* snowflake  */
+
+  @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}
+}
+  @-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}
+}
+@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}
+}
+@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}
+}
+.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running
+}
+.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s
+}
+.snowflake:nth-of-type(1){left:15%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s
+}
+.snowflake:nth-of-type(2){left:25%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s
+}
+.snowflake:nth-of-type(3){left:35%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s
+}
+.snowflake:nth-of-type(4){left:45%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s
+}
+.snowflake:nth-of-type(5){left:5%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s
+}
+.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s
+}
+.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s
+}
+.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s
+}
+.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s
+}
+.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s
+}
+.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
+}
+
+/* snowflake 2 */
+@-webkit-keyframes snowflakes2-fall{0%{top:-10%}100%{top:100%}
+}
+  @-webkit-keyframes snowflakes2-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}
+}
+@keyframes snowflakes2-fall{0%{top:-10%}100%{top:100%}
+}
+@keyframes snowflakes2-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}
+}
+.snowflake2{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running
+}
+.snowflake2:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s
+}
+.snowflake2:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s
+}
+.snowflake2:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s
+}
+.snowflake2:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s
+}
+.snowflake2:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s
+}
+.snowflake2:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s
+}
+.snowflake2:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s
+}
+.snowflake2:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s
+}
+.snowflake2:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s
+}
+.snowflake2:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s
+}
+.snowflake2:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s
+}
+.snowflake2:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
+}
+
+/* snowflake 3 */
+@-webkit-keyframes snowflakes3-fall{0%{top:-10%}100%{top:100%}
+}
+  @-webkit-keyframes snowflakes3-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}
+}
+@keyframes snowflakes3-fall{0%{top:-10%}100%{top:100%}
+}
+@keyframes snowflakes3-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}
+}
+.snowflake3{position:fixed;top:-20%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:1s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:5s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running
+}
+.snowflake3:nth-of-type(0){left:11%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s
+}
+.snowflake3:nth-of-type(1){left:21%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s
+}
+.snowflake3:nth-of-type(2){left:31%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s
+}
+.snowflake3:nth-of-type(3){left:41%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s
+}
+.snowflake3:nth-of-type(4){left:51%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s
+}
+.snowflake3:nth-of-type(5){left:61%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s
+}
+.snowflake3:nth-of-type(6){left:71%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s
+}
+.snowflake3:nth-of-type(7){left:81%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s
+}
+.snowflake3:nth-of-type(8){left:91%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s
+}
+.snowflake3:nth-of-type(9){left:15%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s
+}
+.snowflake3:nth-of-type(10){left:35%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s
+}
+.snowflake3:nth-of-type(11){left:55%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
+}
