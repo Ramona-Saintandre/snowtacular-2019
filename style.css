@@ -49,8 +49,8 @@ h1{
 }
 .snowtacular{
     top:-10px;
-    left:20%;
-    
+    left:30%;
+    text-align: center;
 }
 *:after,
 *:before {
